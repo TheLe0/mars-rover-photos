@@ -13,4 +13,9 @@
       </Content>
     </ItemGroup>
 
+    <ItemGroup>
+      <ProjectReference Include="..\MarsRoverPhotos.Application\MarsRoverPhotos.Application.csproj" />
+      <ProjectReference Include="..\MarsRoverPhotos.Configuration\MarsRoverPhotos.Configuration.csproj" />
+    </ItemGroup>
+
 </Project>

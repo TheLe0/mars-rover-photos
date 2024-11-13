@@ -1,7 +1,13 @@
+using MarsRoverPhotos.Application;
+using MarsRoverPhotos.Configuration;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+
+builder.Services.AddConfiguration(builder.Configuration);
+builder.Services.AddApplication();
 
 var app = builder.Build();
 
