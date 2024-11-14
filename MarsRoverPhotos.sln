@@ -1,36 +1,32 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.11.35327.3
+MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{82535E10-8F49-4912-B0DF-E3E8251DD122}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{0F49C87C-F1D8-4714-8505-C558BE4BD22F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MarsRoverPhotos.Web", "src\MarsRoverPhotos.Web\MarsRoverPhotos.Web.csproj", "{B518E24D-FD44-4C6E-B815-94207F08FEE0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MarsRoverPhotos.Web", "src\MarsRoverPhotos.Web\MarsRoverPhotos.Web.csproj", "{B518E24D-FD44-4C6E-B815-94207F08FEE0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MarsRoverPhotos.UnitTest", "test\MarsRoverPhotos.UnitTest\MarsRoverPhotos.UnitTest.csproj", "{85AC6F9D-F78F-43B2-B4B3-F641C75AEE97}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MarsRoverPhotos.UnitTest", "test\MarsRoverPhotos.UnitTest\MarsRoverPhotos.UnitTest.csproj", "{85AC6F9D-F78F-43B2-B4B3-F641C75AEE97}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MarsRoverPhotos.Fixture", "test\MarsRoverPhotos.Fixture\MarsRoverPhotos.Fixture.csproj", "{94E53063-9858-49CA-8D6A-975980C4D45D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MarsRoverPhotos.Fixture", "test\MarsRoverPhotos.Fixture\MarsRoverPhotos.Fixture.csproj", "{94E53063-9858-49CA-8D6A-975980C4D45D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MarsRoverPhotos.Application", "src\MarsRoverPhotos.Application\MarsRoverPhotos.Application.csproj", "{8A546C96-B2C1-4406-9607-26503BD06269}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MarsRoverPhotos.Application", "src\MarsRoverPhotos.Application\MarsRoverPhotos.Application.csproj", "{8A546C96-B2C1-4406-9607-26503BD06269}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MarsRoverPhotos.Data", "src\MarsRoverPhotos.Data\MarsRoverPhotos.Data.csproj", "{649657F6-134A-4B0A-98EF-FD9FB0379BAB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MarsRoverPhotos.Data", "src\MarsRoverPhotos.Data\MarsRoverPhotos.Data.csproj", "{649657F6-134A-4B0A-98EF-FD9FB0379BAB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MarsRoverPhotos.Domain", "src\MarsRoverPhotos.Domain\MarsRoverPhotos.Domain.csproj", "{24AEA02D-95AF-4ED6-8C90-895145BC9FEA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MarsRoverPhotos.Domain", "src\MarsRoverPhotos.Domain\MarsRoverPhotos.Domain.csproj", "{24AEA02D-95AF-4ED6-8C90-895145BC9FEA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MarsRoverPhotos.Configuration", "src\MarsRoverPhotos.Configuration\MarsRoverPhotos.Configuration.csproj", "{B3ED89EC-DB67-4277-923A-E7B272F0DC92}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MarsRoverPhotos.Configuration", "src\MarsRoverPhotos.Configuration\MarsRoverPhotos.Configuration.csproj", "{B3ED89EC-DB67-4277-923A-E7B272F0DC92}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NasaApiClient", "src\NasaApiClient\NasaApiClient.csproj", "{4FCA55C8-B228-4F77-8C1E-08B9A0CD761C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
-	EndGlobalSection
-	GlobalSection(NestedProjects) = preSolution
-		{B518E24D-FD44-4C6E-B815-94207F08FEE0} = {82535E10-8F49-4912-B0DF-E3E8251DD122}
-		{85AC6F9D-F78F-43B2-B4B3-F641C75AEE97} = {0F49C87C-F1D8-4714-8505-C558BE4BD22F}
-		{94E53063-9858-49CA-8D6A-975980C4D45D} = {0F49C87C-F1D8-4714-8505-C558BE4BD22F}
-		{8A546C96-B2C1-4406-9607-26503BD06269} = {82535E10-8F49-4912-B0DF-E3E8251DD122}
-		{649657F6-134A-4B0A-98EF-FD9FB0379BAB} = {82535E10-8F49-4912-B0DF-E3E8251DD122}
-		{24AEA02D-95AF-4ED6-8C90-895145BC9FEA} = {82535E10-8F49-4912-B0DF-E3E8251DD122}
-		{B3ED89EC-DB67-4277-923A-E7B272F0DC92} = {82535E10-8F49-4912-B0DF-E3E8251DD122}
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{B518E24D-FD44-4C6E-B815-94207F08FEE0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
@@ -61,5 +57,25 @@ Global
 		{B3ED89EC-DB67-4277-923A-E7B272F0DC92}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B3ED89EC-DB67-4277-923A-E7B272F0DC92}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B3ED89EC-DB67-4277-923A-E7B272F0DC92}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4FCA55C8-B228-4F77-8C1E-08B9A0CD761C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4FCA55C8-B228-4F77-8C1E-08B9A0CD761C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4FCA55C8-B228-4F77-8C1E-08B9A0CD761C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4FCA55C8-B228-4F77-8C1E-08B9A0CD761C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{B518E24D-FD44-4C6E-B815-94207F08FEE0} = {82535E10-8F49-4912-B0DF-E3E8251DD122}
+		{85AC6F9D-F78F-43B2-B4B3-F641C75AEE97} = {0F49C87C-F1D8-4714-8505-C558BE4BD22F}
+		{94E53063-9858-49CA-8D6A-975980C4D45D} = {0F49C87C-F1D8-4714-8505-C558BE4BD22F}
+		{8A546C96-B2C1-4406-9607-26503BD06269} = {82535E10-8F49-4912-B0DF-E3E8251DD122}
+		{649657F6-134A-4B0A-98EF-FD9FB0379BAB} = {82535E10-8F49-4912-B0DF-E3E8251DD122}
+		{24AEA02D-95AF-4ED6-8C90-895145BC9FEA} = {82535E10-8F49-4912-B0DF-E3E8251DD122}
+		{B3ED89EC-DB67-4277-923A-E7B272F0DC92} = {82535E10-8F49-4912-B0DF-E3E8251DD122}
+		{4FCA55C8-B228-4F77-8C1E-08B9A0CD761C} = {82535E10-8F49-4912-B0DF-E3E8251DD122}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {F45229AF-9B1A-471B-B84D-62098945A24A}
 	EndGlobalSection
 EndGlobal

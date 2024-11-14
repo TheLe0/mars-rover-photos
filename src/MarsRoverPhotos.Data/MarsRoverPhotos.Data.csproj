@@ -3,12 +3,12 @@
     <PropertyGroup>
         <TargetFramework>net8.0</TargetFramework>
         <ImplicitUsings>enable</ImplicitUsings>
-        <Nullable>enable</Nullable>
     </PropertyGroup>
 
     <ItemGroup>
       <ProjectReference Include="..\MarsRoverPhotos.Configuration\MarsRoverPhotos.Configuration.csproj" />
       <ProjectReference Include="..\MarsRoverPhotos.Domain\MarsRoverPhotos.Domain.csproj" />
+      <ProjectReference Include="..\NasaApiClient\NasaApiClient.csproj" />
     </ItemGroup>
 
     <ItemGroup>
@@ -21,9 +21,7 @@
     </ItemGroup>
 
     <ItemGroup>
-      <None Update="Seed\dates.txt">
-        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-      </None>
+      <Folder Include="Migrations\" />
     </ItemGroup>
 
 </Project>
