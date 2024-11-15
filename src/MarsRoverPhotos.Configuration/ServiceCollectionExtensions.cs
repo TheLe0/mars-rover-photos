@@ -9,7 +9,10 @@ public static class ServiceCollectionExtensions
     {
         var nasaConfig = configuration.GetSection("NasaApi").Get<NasaConfiguration>();
         services.AddSingleton(nasaConfig);
-        
+
+        var appConfig = configuration.GetSection("AppConfig").Get<AppConfiguration>();
+        services.AddSingleton(appConfig);
+
         var connectionString = configuration.GetConnectionString("DefaultConnection");
         var databaseConfig = new DatabaseConfiguration(connectionString);
         services.AddSingleton(databaseConfig);

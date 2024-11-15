@@ -1,26 +1,28 @@
 using System.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
 using MarsRoverPhotos.Web.Models;
+using MarsRoverPhotos.Application.Services;
 
 namespace MarsRoverPhotos.Web.Controllers;
 
 public class HomeController : Controller
 {
     private readonly ILogger<HomeController> _logger;
+    private readonly IPhotoService _photoService;
 
-    public HomeController(ILogger<HomeController> logger)
+    public HomeController(ILogger<HomeController> logger, IPhotoService photoService)
     {
         _logger = logger;
+        _photoService = photoService;
     }
 
-    public IActionResult Index()
+    public async Task<IActionResult> Index(int pageNumber = 1)
     {
-        return View();
-    }
+        var photoContainer = await _photoService.GetAllAsync(pageNumber);
 
-    public IActionResult Privacy()
-    {
-        return View();
+        ViewBag.TotalPages = (int)Math.Ceiling(photoContainer.TotalSize / (double)photoContainer.PageSize);
+
+        return View(photoContainer.Photos);
     }
 
     [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]

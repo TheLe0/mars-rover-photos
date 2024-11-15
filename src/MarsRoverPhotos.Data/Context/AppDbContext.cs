@@ -12,6 +12,7 @@ public class AppDbContext(DbContextOptions<AppDbContext> options, IPhotoLoader p
     {
         base.OnModelCreating(modelBuilder);
 
-        modelBuilder.Entity<Photo>().HasData(photoLoader.LoadPhotos());
+        // Only used to generate the migration with the data
+        //modelBuilder.Entity<Photo>().HasData(photoLoader.LoadPhotos());
     }
 }
