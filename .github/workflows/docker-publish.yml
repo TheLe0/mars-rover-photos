@@ -21,11 +21,11 @@ jobs:
       - name: Build the Docker image
         run: |
           IMAGE_TAG=${{ github.ref_name }}
-          docker build -t docker.io/${{ secrets.DOCKER_USERNAME }}/${{ github.repository }}:${IMAGE_TAG} .
-          docker tag docker.io/${{ secrets.DOCKER_USERNAME }}/${{ github.repository }}:${IMAGE_TAG} docker.io/${{ secrets.DOCKER_USERNAME }}/${{ github.repository }}:latest
+          docker build -t docker.io/${{ secrets.DOCKER_USERNAME }}/mars-rover-photos:${IMAGE_TAG} .
+          docker tag docker.io/${{ secrets.DOCKER_USERNAME }}/mars-rover-photos:${IMAGE_TAG} docker.io/${{ secrets.DOCKER_USERNAME }}/mars-rover-photos:latest
 
       - name: Push the Docker image
         run: |
           IMAGE_TAG=${{ github.ref_name }}
-          docker push docker.io/${{ secrets.DOCKER_USERNAME }}/${{ github.repository }}:${IMAGE_TAG}
-          docker push docker.io/${{ secrets.DOCKER_USERNAME }}/${{ github.repository }}:latest
+          docker push docker.io/${{ secrets.DOCKER_USERNAME }}/mars-rover-photos:${IMAGE_TAG}
+          docker push docker.io/${{ secrets.DOCKER_USERNAME }}/mars-rover-photos:latest
