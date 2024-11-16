@@ -20,10 +20,16 @@ RUN dotnet build -c $BUILD_CONFIGURATION -o $DockerHOME/build
 
 RUN dotnet ef database update --project /src/MarsRoverPhotos.Data/MarsRoverPhotos.Data.csproj --startup-project /src/MarsRoverPhotos.Web/MarsRoverPhotos.Web.csproj
 
+RUN mkdir -p /app/build && cp /src/MarsRoverPhotos.Web/app.db /app/build/app.db
+
 FROM build AS publish
 ARG BUILD_CONFIGURATION=Release
 RUN dotnet publish -c $BUILD_CONFIGURATION -o /app/publish /p:UseAppHost=false
 
 FROM base AS final
 COPY --from=publish /app/publish .
+
+COPY --from=build /app/build/app.db .
+
 ENTRYPOINT ["dotnet", "MarsRoverPhotos.Web.dll"]
+
