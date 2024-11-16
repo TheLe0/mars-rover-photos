@@ -1,7 +1,49 @@
 ﻿@{
     ViewData["Title"] = "Home Page";
+    var totalPages = ViewBag.TotalPages;
+    var nextPage = ViewBag.NexPage;
+    var currentPage = ViewBag.NexPage - 1;
 }
 
-<div class="text-center">
- 
+<div class="container mt-5">
+    <h2 class="text-center mb-4">Photo Gallery</h2>
+
+    <div class="table-responsive">
+        <table class="table table-bordered">
+            <thead class="grid-thead">
+                <tr>
+                    <th scope="col">Filename</th>
+                    <th scope="col">Date</th>
+                </tr>
+            </thead>
+            <tbody class="grid-tbody">
+                @foreach (var photo in Model)
+                {
+                    <tr class="grid-line" onclick="openImageInNewTab('@photo.ImageUrl')">
+                        <td>@photo.Filename</td>
+                        <td>@photo.Date.ToString("yyyy-MM-dd")</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+
+    <div class="d-flex justify-content-center mt-4">
+        <nav>
+            <ul class="pagination">
+                <li class="page-item @(currentPage == 1 ? "disabled" : "")">
+                    <a class="page-link" href="@Url.Action("Index", new { pageNumber = currentPage - 1 })">Previous</a>
+                </li>
+                <li class="page-item @(currentPage == totalPages ? "disabled" : "")">
+                    <a class="page-link" href="@Url.Action("Index", new { pageNumber = nextPage })">Next</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
 </div>
+
+<script>
+    function openImageInNewTab(imageUrl) {
+        window.open(imageUrl, '_blank');
+    }
+</script>

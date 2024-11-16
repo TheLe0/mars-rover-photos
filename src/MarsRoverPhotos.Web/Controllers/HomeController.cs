@@ -21,6 +21,7 @@ public class HomeController : Controller
         var photoContainer = await _photoService.GetAllAsync(pageNumber);
 
         ViewBag.TotalPages = (int)Math.Ceiling(photoContainer.TotalSize / (double)photoContainer.PageSize);
+        ViewBag.NexPage = photoContainer.NextPage;
 
         return View(photoContainer.Photos);
     }

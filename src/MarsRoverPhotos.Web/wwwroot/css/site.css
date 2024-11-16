@@ -20,4 +20,32 @@ html {
 body {
     margin-bottom: 60px;
     background-color: #222222;
+    color: white;
+}
+
+.grid-tbody {
+    color: white;
+}
+
+.grid-line {
+    cursor: pointer;
+}
+
+.grid-line:hover {
+    color: #ffdd48
+}
+
+.page-link {
+    background-color: #b36c10;
+    color: white;
+}
+
+.page-link:hover {
+    background-color: #ffdd48;
+    color: white;
+}
+
+.grid-thead {
+    background-color: #b36c10;
+    color: white;
 }
