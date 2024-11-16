@@ -12,6 +12,7 @@
     <ItemGroup>
         <PackageReference Include="coverlet.collector" Version="6.0.0" />
         <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.8.0" />
+        <PackageReference Include="Moq" Version="4.20.72" />
         <PackageReference Include="System.Net.Http" Version="4.3.4" />
         <PackageReference Include="System.Text.RegularExpressions" Version="4.3.1" />
         <PackageReference Include="xunit" Version="2.5.3" />
@@ -20,6 +21,25 @@
 
     <ItemGroup>
         <Using Include="Xunit" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Folder Include="wwwroot\" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\..\src\MarsRoverPhotos.Application\MarsRoverPhotos.Application.csproj" />
+      <ProjectReference Include="..\..\src\MarsRoverPhotos.Configuration\MarsRoverPhotos.Configuration.csproj" />
+      <ProjectReference Include="..\..\src\MarsRoverPhotos.Data\MarsRoverPhotos.Data.csproj" />
+      <ProjectReference Include="..\..\src\MarsRoverPhotos.Domain\MarsRoverPhotos.Domain.csproj" />
+      <ProjectReference Include="..\..\src\NasaApiClient\NasaApiClient.csproj" />
+      <ProjectReference Include="..\MarsRoverPhotos.Fixture\MarsRoverPhotos.Fixture.csproj" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <None Update="wwwroot\dates.txt">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </None>
     </ItemGroup>
 
 </Project>

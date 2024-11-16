@@ -6,4 +6,15 @@
         <Nullable>enable</Nullable>
     </PropertyGroup>
 
+    <ItemGroup>
+      <PackageReference Include="Bogus" Version="35.6.1" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\..\src\MarsRoverPhotos.Application\MarsRoverPhotos.Application.csproj" />
+      <ProjectReference Include="..\..\src\MarsRoverPhotos.Configuration\MarsRoverPhotos.Configuration.csproj" />
+      <ProjectReference Include="..\..\src\MarsRoverPhotos.Domain\MarsRoverPhotos.Domain.csproj" />
+      <ProjectReference Include="..\..\src\NasaApiClient\NasaApiClient.csproj" />
+    </ItemGroup>
+
 </Project>

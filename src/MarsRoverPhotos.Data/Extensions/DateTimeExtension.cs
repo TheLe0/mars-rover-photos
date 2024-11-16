@@ -1,5 +1,4 @@
-﻿using Microsoft.VisualBasic;
-using System.Globalization;
+﻿using System.Globalization;
 using System.Reflection;
 
 namespace MarsRoverPhotos.Data.Extensions;
