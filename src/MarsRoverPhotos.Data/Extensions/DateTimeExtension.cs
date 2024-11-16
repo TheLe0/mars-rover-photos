@@ -19,7 +19,8 @@ public static class DateTimeExtension
         DateTime dateValue;
         string line;
 
-        FileStream fileStream = new FileStream(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location) + @"\wwwroot\dates.txt", FileMode.Open);
+        string path = Path.Combine(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location)!, "wwwroot", "dates.txt");
+        FileStream fileStream = new FileStream(path, FileMode.Open);
         using (StreamReader reader = new StreamReader(fileStream))
         {
             while ((line = reader.ReadLine()) != null)
